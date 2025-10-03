@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+}
+body {
+  padding-bottom: 500px;
+}
+h1 {
+  color: red;
+}
+/* classe dinamica */
+.red-title {
+  font-size: 50px;
+  color: magenta;
+  background-color: #000;
+}
