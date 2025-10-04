@@ -6,6 +6,8 @@ const Form = ({userName, userEmail, userTel}) => {
   const [name, setName] = useState(userName)
   const [email, setEmail] = useState(userEmail)
   const [tel, setTel] = useState(userTel)
+  const [desc, setBio] = useState("")
+  const [pu, setPu] = useState("")
 
   const handleName = (e) => {
     setName(e.target.value)
@@ -14,9 +16,16 @@ const Form = ({userName, userEmail, userTel}) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    console.log(name, email)
+    console.log(name, email, tel, desc, pu)
+    setEmail("")
+    setName("")
+    setTel("")
+    setBio("")
+    setPu("")
   }
   console.log(name, email)
+
+  
   return (
     <div>
         {/* criação do form */}
@@ -41,6 +50,20 @@ const Form = ({userName, userEmail, userTel}) => {
               // controlled input
                 value={email || ""}
               />
+            </label>
+            {/* textArea */}
+            <label>
+              <span>descrição:</span>
+              <textarea name="desc" placeholder='Digite sua descrição' onChange={(e) => setBio(e.target.value)} value={desc}></textarea>
+            </label>
+            {/* select */}
+            <label>
+              <span>função no sistema</span>
+              <select name="pu" onChange={(e) => setPu(e.target.value)} value={pu}>
+                <option value="user">Usuário</option>
+                <option value="developer">programador</option>
+                <option value="rules">regras</option>
+              </select>
             </label>
             <input type="submit" value="enviar" />
         </form>
