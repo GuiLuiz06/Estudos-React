@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <h1>Formulário em react!</h1>
-      <Form userName="digite seu nome" userTel="+55 (ddd) (xxxxx-xxxx)" userEmail="coloqueseuemail@gmail.com"/>
+      <Form userName="digite seu nome" userTel="+55 (xx) (xxxxx-xxxx)" userEmail="seuemail@gmail.com"/>
     </div>
   )
 
